@@ -1,12 +1,18 @@
 
 所谓“日志”分为三种：
 - logging，通常意义上的日志，比如程序打印到文件或stdout的字符串行。记录了程序运行过程中发生的事件。
+    - Statements von den Entwicklern im Quellcode.
+    - Beinhalten Status oder -Fehlermeldungen
 - metrics，应用程序运行指标，用于测量程序的运行情况。
+    - System measurements (cpu, mem, users)
+    - Alles, was gemonitored werden kann und als Zahlenreihe ausgedrückt werden kann
 - tracing，在微服务架构中应用程序/组件之间的调用链。
+    - Beinhalten Informationen über die Route/Ausführung von bestimmten Anfragen
+    - Wird in Microservice-Umgebungen häufig genutzt
 
 以error为例：
 
-- logging 可以告诉你error合适发生，以及细节信息
+- logging 可以告诉你error什么时候发生，以及细节信息
 - metrics 可以告诉你error发生了多少次
 - tracing 可以告诉你这个error的影响面有多大
 
