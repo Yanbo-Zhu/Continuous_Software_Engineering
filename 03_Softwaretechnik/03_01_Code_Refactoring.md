@@ -64,3 +64,5 @@ Smells: Datenklassen, unangebrachte Intimität  不恰当的亲密感 , Neid 嫉
 
 Zusammenfassung: Ersetzen Sie sie durch eine neue Methode in der Klasse, die sie am meisten verwendet
 
+![](image/Pasted%20image%2020241130001130.png)
+
