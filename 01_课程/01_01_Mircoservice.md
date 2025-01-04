@@ -27,10 +27,17 @@ In short, the microservice architectural style is an approach to developing a si
 
 These services are built around business capabilities and are independently deployable by fully automated deployment machinery. 
 
-
 There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies.”
 
-Characteristics of Microservices [Fowler]
+Each user request is satisfied by some sequence of services
+A service represents a specific business capability
+Most services are not externally available
+Each service communicates with other services through service interfaces
+
+![](image/Pasted%20image%2020250104105635.png)
+
+
+# 3 Characteristics of Microservices
 1. Componentization via Services
 2. Organized around Business Capabilities
 3. Products not Projects
@@ -43,7 +50,10 @@ Characteristics of Microservices [Fowler]
 
 
 
-# 3 Microservice Design Patterns: Data Management Patterns
+# 4 Microservice Design Patterns: Data Management Patterns
+
+Source:
+https://microservices.io/patterns/
 
 
 Data Management Patterns
@@ -52,17 +62,22 @@ Data Management Patterns
 • API Composer
 • CQRS
 
-
-## 3.1 Pattern: Shared Database
+![](image/Pasted%20image%2020250104123027.png)
+## 4.1 Pattern: Shared Database
 
 
 to meet the characteristic : Decentralized Data Management 
 
 ![](image/Pasted%20image%2020241109144120.png)
 
+
+(a) Private Tables per microservice, sharing a database server and schema
+(b) Schema per microservice, sharing a common database server
+(c) Database server per microservice
+
 ![](image/Pasted%20image%2020241109144320.png)
 
-## 3.2 Pattern: API Composer
+## 4.2 Pattern: API Composer
 
 How can we query and retrieve data from across multiple microservices?
 
@@ -70,7 +85,7 @@ How can we query and retrieve data from across multiple microservices?
 
 
 
-## 3.3 Pattern: Command Query Responsibility Segregation (CQRS)
+## 4.3 Pattern: Command Query Responsibility Segregation (CQRS)
 
 
 ![](image/Pasted%20image%2020241109144422.png)
@@ -82,7 +97,7 @@ How can we query and retrieve data from across multiple microservices?
 
 邮编的 block 上面的小球 是function in API
 
-# 4 Inter-service Communication Patterns
+# 5 Inter-service Communication Patterns
 
 Inter-service Communication Patterns
 • Synchronous Communication
@@ -109,5 +124,35 @@ Pattern: Server-side Service Discovery
 ![](image/Pasted%20image%2020241109144724.png)
 
 ![](image/Pasted%20image%2020241109144756.png)
+
+
+
+# 6 Service API Design 
+
+## 6.1 RESTful Services
+
+![](image/Pasted%20image%2020250104105722.png)
+
+
+## 6.2 API-driven development
+-  “API first” – specify an interface, then implement
+- Internal vs. External APIs
+- API-level documentation (tools like swagger) →
+- API documentation serves as contract
+    - between teams
+    - for testing
+- API versioning makes changes explicit
+
+![](image/Pasted%20image%2020250104105816.png)
+
+
+## 6.3 OpenAPI Specifications and Generators
+
+API Documentation
+• Editor based document generation: e.g. https://editor.swagger.io/
+• Generation of OpenAPI documents based on code: e.g. https://springdoc.org/
+
+Generation of Webservices based on API Documentation
+• OpenAPI Generator: https://openapi-generator.tech/
 
 
