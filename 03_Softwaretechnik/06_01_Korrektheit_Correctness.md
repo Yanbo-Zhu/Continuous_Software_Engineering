@@ -28,10 +28,14 @@ WHILE Syntax
 ![](image/Pasted%20image%2020241215162558.png)
 
 
+![](image/Pasted%20image%2020250108102958.png)
+-| 符号 代表 negation B =  nicht B
+
+
 # 3 partielle Korrektheit und totale Korrektheit
 
 Idee des Hoare-Kalküls: Die Verifikation eines Programms besteht aus zwei Schritten.
-• Beweis der partiellen Korrektheit
+• Beweis der partiellen Korrektheit: 通过  partiellen Korrektheit 证明  , das programm beim Alle möglichen Eingaben korrekt functionieren kann 
 • Beweis der Terminierung
 
 Am Beispiel Fakultäts-Funktion:
@@ -100,6 +104,8 @@ Annahme: Programm terminiert nach endlich vielen Schritten
 Vorbedingung: Nur wenn diese erfüllt ist kann die Nachbedingung garantiert werden (durch Beweis)
 Nachbedingung: Gefordertes Ergebnis (Spezifikation, z.B. Post- Condition eines Contracts)
 ➢Vorbedingungen ergeben sich oft aus dem Beweis
+
+
 
 ## 3.3 Bedingungen
 
@@ -181,10 +187,18 @@ Jedes Kalkül gibt eine Menge von Inferenzregeln vor
 - Beispiel aus dem Kalkül des natürlichen Schließens (Modus Ponens):
     - ![](image/Pasted%20image%2020241215164443.png)
     - „Wenn A und A impliziert B gilt, dann gilt B“
+    - 如果分子成立, 则 分母也成立 
 
 
 
 ## 5.2 Hoare Kalkül: Regeln
+
+
+根据 inferenzregel, 如果 分子上面的条件成立, 则分母上的条件也会成立 
+
+![](image/Pasted%20image%2020250108103713.png)
+
+
 
 ### 5.2.1 Sequenzregel
 
